@@ -10,3 +10,10 @@ Software Engineer and Business Analyst.
 Manual Tester and Automation Tester.
 Manual Tester and Developers.
 Cucumber also benefits the client to understand the application code as it uses Gherkin language which is in Plain Text. Anyone in the organization can understand the behavior of the software. The syntax's of Gherkin is in simple text which is readable and understandable.
+
+## Prerequisite for using Cucumber with Selenium.
+Before we start integration cucumber with selenium we need the following items:
+
+Selenium jar files:
+
+Selenium-server-standalone
