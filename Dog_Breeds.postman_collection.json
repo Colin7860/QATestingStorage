@@ -1,0 +1,321 @@
+{
+	"id": "c5033365-db80-b9fe-87fc-5f41bced8acc",
+	"owner": "5036039",
+	"name": "Dog_Breeds",
+	"description": "",
+	"order": [
+		"bd562225-13fb-43a5-9d49-985cdbfcd0e2",
+		"c180cdd4-8f66-4898-8174-6763bc62d7a2",
+		"6eb3c1eb-9062-4627-9979-438e11028eb9",
+		"e2b38bc9-3e6d-420a-aaaf-08e69678e233",
+		"a009c3d2-1ae3-4486-a08c-ad2567b1d284"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1533478986443,
+	"public": false,
+	"lastUpdatedBy": "5036039",
+	"lastRevision": 4538955795,
+	"team": null,
+	"variables": null,
+	"auth": null,
+	"events": null,
+	"requests": [
+		{
+			"folder": null,
+			"id": "6eb3c1eb-9062-4627-9979-438e11028eb9",
+			"name": "List of sub-breeds for “retriever",
+			"dataMode": "params",
+			"data": null,
+			"auth": null,
+			"events": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": null,
+			"variables": null,
+			"headers": "",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "https://dog.ceo/api/breed/retriever/list",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"queryParams": [],
+			"headerData": [],
+			"pathVariableData": [],
+			"collectionId": "c5033365-db80-b9fe-87fc-5f41bced8acc"
+		},
+		{
+			"folder": null,
+			"id": "a009c3d2-1ae3-4486-a08c-ad2567b1d284",
+			"name": "Verify retriever breed 2",
+			"dataMode": "params",
+			"data": null,
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9c0be45e-bdb3-4752-bacb-1289cd8e2c2c",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Check retriver is in list\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.message.retriever[1]).to.eql(\"curly\");",
+							"});"
+						]
+					}
+				}
+			],
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": null,
+			"variables": null,
+			"headers": "",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "https://dog.ceo/api/breeds/list/all",
+			"preRequestScript": null,
+			"tests": "pm.test(\"Check retriver is in list\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.message.retriever[1]).to.eql(\"curly\");\n});",
+			"currentHelper": null,
+			"helperAttributes": null,
+			"queryParams": [],
+			"headerData": [],
+			"pathVariableData": [],
+			"collectionId": "c5033365-db80-b9fe-87fc-5f41bced8acc"
+		},
+		{
+			"folder": null,
+			"id": "bd562225-13fb-43a5-9d49-985cdbfcd0e2",
+			"name": "Verify retriever breed",
+			"dataMode": "params",
+			"data": null,
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9c0be45e-bdb3-4752-bacb-1289cd8e2c2c",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Check retriver is in list\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.message.retriever[1]).to.eql(\"curly\");",
+							"});"
+						]
+					}
+				}
+			],
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": null,
+			"variables": null,
+			"headers": "",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "https://dog.ceo/api/breeds/list/all",
+			"preRequestScript": null,
+			"tests": "pm.test(\"Check retriver is in list\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.message.retriever[1]).to.eql(\"curly\");\n});",
+			"currentHelper": null,
+			"helperAttributes": null,
+			"queryParams": [],
+			"headerData": [],
+			"pathVariableData": [],
+			"collectionId": "c5033365-db80-b9fe-87fc-5f41bced8acc"
+		},
+		{
+			"folder": null,
+			"id": "c180cdd4-8f66-4898-8174-6763bc62d7a2",
+			"name": "Get all list of Breeds",
+			"dataMode": "params",
+			"data": null,
+			"auth": null,
+			"events": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": null,
+			"variables": null,
+			"headers": "",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "https://dog.ceo/api/breeds/list/all",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"queryParams": [],
+			"headerData": [],
+			"pathVariableData": [],
+			"collectionId": "c5033365-db80-b9fe-87fc-5f41bced8acc",
+			"responses": [
+				{
+					"owner": "5036039",
+					"lastUpdatedBy": "5036039",
+					"lastRevision": 4638161486,
+					"request": {
+						"url": "https://dog.ceo/api/breeds/list/all",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [],
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					},
+					"id": "a090ee39-dbe1-490c-989b-de530172f780",
+					"name": "Get all list of Breeds",
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": null,
+					"headers": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Age",
+							"value": "20289",
+							"name": "Age",
+							"description": "The age the object has been in a proxy cache in seconds"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "44b52e764a958046-CPT",
+							"name": "CF-RAY",
+							"description": "Custom header"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=43200, public",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "close",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Aug 2018 16:12:16 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+							"name": "Expect-CT",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Vary",
+							"value": "",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "Via",
+							"value": "1.1 varnish (Varnish/6.0), 1.1 varnish (Varnish/6.0)",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Cache",
+							"value": "HIT",
+							"name": "X-Cache",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Cache-Hits",
+							"value": "38",
+							"name": "X-Cache-Hits",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.13",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [
+						{
+							"domain": "dog.ceo",
+							"expirationDate": 1565110305,
+							"httpOnly": true,
+							"name": "__cfduid",
+							"path": "/",
+							"secure": true,
+							"url": "https://dog.ceo",
+							"value": "d5912db3a17c04e6b504178a9e40f4bf81533574305"
+						}
+					],
+					"mime": "",
+					"text": "{\"status\":\"success\",\"message\":{\"affenpinscher\":[],\"african\":[],\"airedale\":[],\"akita\":[],\"appenzeller\":[],\"basenji\":[],\"beagle\":[],\"bluetick\":[],\"borzoi\":[],\"bouvier\":[],\"boxer\":[],\"brabancon\":[],\"briard\":[],\"bulldog\":[\"boston\",\"french\"],\"bullterrier\":[\"staffordshire\"],\"cairn\":[],\"cattledog\":[\"australian\"],\"chihuahua\":[],\"chow\":[],\"clumber\":[],\"collie\":[\"border\"],\"coonhound\":[],\"corgi\":[\"cardigan\"],\"cotondetulear\":[],\"dachshund\":[],\"dalmatian\":[],\"dane\":[\"great\"],\"deerhound\":[\"scottish\"],\"dhole\":[],\"dingo\":[],\"doberman\":[],\"elkhound\":[\"norwegian\"],\"entlebucher\":[],\"eskimo\":[],\"germanshepherd\":[],\"greyhound\":[\"italian\"],\"groenendael\":[],\"hound\":[\"afghan\",\"basset\",\"blood\",\"english\",\"ibizan\",\"walker\"],\"husky\":[],\"keeshond\":[],\"kelpie\":[],\"komondor\":[],\"kuvasz\":[],\"labrador\":[],\"leonberg\":[],\"lhasa\":[],\"malamute\":[],\"malinois\":[],\"maltese\":[],\"mastiff\":[\"bull\",\"tibetan\"],\"mexicanhairless\":[],\"mix\":[],\"mountain\":[\"bernese\",\"swiss\"],\"newfoundland\":[],\"otterhound\":[],\"papillon\":[],\"pekinese\":[],\"pembroke\":[],\"pinscher\":[\"miniature\"],\"pointer\":[\"german\"],\"pomeranian\":[],\"poodle\":[\"miniature\",\"standard\",\"toy\"],\"pug\":[],\"puggle\":[],\"pyrenees\":[],\"redbone\":[],\"retriever\":[\"chesapeake\",\"curly\",\"flatcoated\",\"golden\"],\"ridgeback\":[\"rhodesian\"],\"rottweiler\":[],\"saluki\":[],\"samoyed\":[],\"schipperke\":[],\"schnauzer\":[\"giant\",\"miniature\"],\"setter\":[\"english\",\"gordon\",\"irish\"],\"sheepdog\":[\"english\",\"shetland\"],\"shiba\":[],\"shihtzu\":[],\"spaniel\":[\"blenheim\",\"brittany\",\"cocker\",\"irish\",\"japanese\",\"sussex\",\"welsh\"],\"springer\":[\"english\"],\"stbernard\":[],\"terrier\":[\"american\",\"australian\",\"bedlington\",\"border\",\"dandie\",\"fox\",\"irish\",\"kerryblue\",\"lakeland\",\"norfolk\",\"norwich\",\"patterdale\",\"scottish\",\"sealyham\",\"silky\",\"tibetan\",\"toy\",\"westhighland\",\"wheaten\",\"yorkshire\"],\"vizsla\":[],\"weimaraner\":[],\"whippet\":[],\"wolfhound\":[\"irish\"]}}",
+					"language": "json",
+					"rawDataType": null,
+					"requestObject": "{\"url\":\"https://dog.ceo/api/breeds/list/all\",\"pathVariableData\":[],\"queryParams\":[],\"headerData\":[],\"data\":null,\"method\":\"GET\",\"dataMode\":\"params\"}",
+					"createdAt": "2018-08-16T16:14:13.000Z",
+					"updatedAt": "2018-08-16T16:14:13.000Z",
+					"write": true
+				}
+			]
+		},
+		{
+			"folder": null,
+			"id": "e2b38bc9-3e6d-420a-aaaf-08e69678e233",
+			"name": "Random image / link for the sub-breed “golden” ",
+			"dataMode": "params",
+			"data": null,
+			"auth": null,
+			"events": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": null,
+			"variables": null,
+			"headers": "",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "https://dog.ceo/api/breed/retriever/golden/images/random",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": null,
+			"helperAttributes": null,
+			"queryParams": [],
+			"headerData": [],
+			"pathVariableData": [],
+			"collectionId": "c5033365-db80-b9fe-87fc-5f41bced8acc"
+		}
+	]
+}
